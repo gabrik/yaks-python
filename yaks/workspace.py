@@ -223,7 +223,7 @@ class Workspace(object):
                 info.flags = 0x60
                 info.encoding = Encoding.to_z_encoding(value.get_encoding())
                 info.kind = Z_PUT
-                send_replies([(path_selector, (value.as_z_payload(), info))])
+                send_replies([(path, (value.as_z_payload(), info))])
             if self.executor is None:
                 query_handler_p(path_selector,
                                 content_selector,
